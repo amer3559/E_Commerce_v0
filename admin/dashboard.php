@@ -85,7 +85,7 @@
 								<i class="fa fa-users"></i>
 								Latest <?php echo $numUsers ?> Registerd Users
 								<span class="toggle-info pull-right">
-									<i class="fa fa-plus fa-lg"></i>
+									<i class="fa fa-minus fa-lg"></i>
 								</span>
 							</div>
 							<div class="panel-body">
@@ -121,7 +121,7 @@
 							<div class="panel-heading">
 								<i class="fa fa-tag"></i> Latest <?php echo $numItems ?> Items
 								<span class="toggle-info pull-right">
-									<i class="fa fa-plus fa-lg"></i>
+									<i class="fa fa-minus fa-lg"></i>
 								</span>
 							</div>
 							<div class="panel-body">
@@ -161,7 +161,7 @@
 								<i class="fa fa-comments-o"></i>
 								Latest <?php echo $numComments ?> Comments
 								<span class="toggle-info pull-right">
-									<i class="fa fa-plus fa-lg"></i>
+									<i class="fa fa-minus fa-lg"></i>
 								</span>
 							</div>
 							<div class="panel-body">
@@ -198,7 +198,7 @@
 						</div>
 					</div>
 				</div>
-				 End Latest Comments
+                <!-- End Latest Comments-->
 			</div>
 		</div>
 
