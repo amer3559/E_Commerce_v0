@@ -66,7 +66,7 @@
 									echo "<td>" . $row['UserID'] . "</td>";
 									echo "<td>";
 									if (empty($row['avatar'])) {
-										echo 'No Image';
+                                        echo "<img src='uploads/avatars/img.png' alt='' />";
 									} else {
 										echo "<img src='uploads/avatars/" . $row['avatar'] . "' alt='' />";
 									}
@@ -92,7 +92,7 @@
 						<tr>
 					</table>
 				</div>
-				<a href="members.php?do=Add" class="btn btn-primary">
+				<a href="members.php?do=Add" class="btn btn-primary newBtn">
 					<i class="fa fa-plus"></i> New Member
 				</a>
 			</div>
@@ -189,8 +189,8 @@
 				$avatarAllowedExtension = array("jpeg", "jpg", "png", "gif");
 
 				// Get Avatar Extension
-
-				$avatarExtension = strtolower(end(explode('.', $avatarName)));
+                $arr = explode('.', $avatarName);
+				$avatarExtension = strtolower(end($arr));
 
 				// Get Variables From The Form
 
@@ -403,6 +403,7 @@
 
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+
 				// Get Variables From The Form
 
 				$id 	= $_POST['userid'];
@@ -437,6 +438,7 @@
 				if (empty($email)) {
 					$formErrors[] = 'Email Cant Be <strong>Empty</strong>';
 				}
+
 
 				// Loop Into Errors Array And Echo It
 

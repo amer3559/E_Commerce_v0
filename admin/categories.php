@@ -65,24 +65,24 @@
 									echo "<h3>" . $cat['Name'] . '</h3>';
 									echo "<div class='full-view'>";
 										echo "<p>"; if($cat['Description'] == '') { echo 'This category has no description'; } else { echo $cat['Description']; } echo "</p>";
-										if($cat['Visibility'] == 1) { echo '<span class="visibility cat-span"><i class="fa fa-eye"></i> Hidden</span>'; } 
+										if($cat['Visibility'] == 1) { echo '<span class="visibility cat-span"><i class="fa fa-eye"></i> Hidden</span>'; }
 										if($cat['Allow_Comment'] == 1) { echo '<span class="commenting cat-span"><i class="fa fa-close"></i> Comment Disabled</span>'; }
-										if($cat['Allow_Ads'] == 1) { echo '<span class="advertises cat-span"><i class="fa fa-close"></i> Ads Disabled</span>'; }  
-									echo "</div>";
+										if($cat['Allow_Ads'] == 1) { echo '<span class="advertises cat-span"><i class="fa fa-close"></i> Ads Disabled</span>'; }
 
-									// Get Child Categories
-							      	$childCats = getAllFrom("*", "categories", "where parent = {$cat['ID']}", "", "ID", "ASC");
-							      	if (! empty($childCats)) {
-								      	echo "<h4 class='child-head'>Child Categories</h4>";
-								      	echo "<ul class='list-unstyled child-cats'>";
-										foreach ($childCats as $c) {
-											echo "<li class='child-link'>
-												<a href='categories.php?do=Edit&catid=" . $c['ID'] . "'>" . $c['Name'] . "</a>
-												<a href='categories.php?do=Delete&catid=" . $c['ID'] . "' class='show-delete confirm'> Delete</a>
-											</li>";
-										}
-										echo "</ul>";
-									}
+                                        // Get Child Categories
+                                        $childCats = getAllFrom("*", "categories", "where parent = {$cat['ID']}", "", "ID", "ASC");
+                                        if (! empty($childCats)) {
+                                            echo "<h4 class='child-head'>Child Categories</h4>";
+                                            echo "<ul class='list-unstyled child-cats'>";
+                                            foreach ($childCats as $c) {
+                                                echo "<li class='child-link'>
+                                                        <a href='categories.php?do=Edit&catid=" . $c['ID'] . "'>" . $c['Name'] . "</a>
+                                                        <a href='categories.php?do=Delete&catid=" . $c['ID'] . "' class='show-delete confirm'> Delete</a>
+                                                    </li>";
+                                            }
+                                            echo "</ul>";
+                                        }
+                                    echo "</div>";
 
 								echo "</div>";
 								echo "<hr>";

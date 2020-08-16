@@ -90,7 +90,7 @@
 						<tr>
 					</table>
 				</div>
-				<a href="items.php?do=Add" class="btn btn-sm btn-primary">
+				<a href="items.php?do=Add" class="btn btn-sm btn-primary newBtn">
 					<i class="fa fa-plus"></i> New Item
 				</a>
 			</div>
@@ -99,7 +99,7 @@
 
 				echo '<div class="container">';
 					echo '<div class="nice-message">There\'s No Items To Show</div>';
-					echo '<a href="items.php?do=Add" class="btn btn-sm btn-primary">
+					echo '<a href="items.php?do=Add" class="btn btn-sm btn-primary newBtn">
 							<i class="fa fa-plus"></i> New Item
 						</a>';
 				echo '</div>';
